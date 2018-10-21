@@ -1,4 +1,4 @@
-# NotBoringSchool
+# telegram_app
 **Initial**
 
 $ sudo apt install `less apt.txt | tr "\n" " "`
