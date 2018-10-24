@@ -35,6 +35,7 @@ INSTALLED_APPS = [
 
     'telegram_app',
     'telegram_app.api',
+    'telegram_app.bot',
 ]
 
 MIDDLEWARE = [
@@ -123,3 +124,33 @@ MEDIA_URL = '/media/'
 
 AUTH_USER_MODEL = 'telegram_app.User'
 LOGIN_URL = '/user/login/'
+
+# Django rest framework
+# http://www.django-rest-framework.org/api-guide/settings/
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': (
+        'rest_framework.renderers.JSONRenderer',
+    ),
+
+    'DEFAULT_PARSER_CLASSES': (
+        'rest_framework.parsers.JSONParser',
+    ),
+
+    'TEST_REQUEST_RENDERER_CLASSES': (
+        'rest_framework.renderers.JSONRenderer',
+    ),
+
+    'TEST_REQUEST_DEFAULT_FORMAT': (
+        'rest_framework.parsers.JSONParser',
+    ),
+
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10
+}
+
+# Telegram bot
+TELEGRAM_BOT_API_URL = 'https://api.telegram.org/bot728534422:AAFJ_w9qsyQmeIrU1YxZZbp0Nyx2NS_L6_s/'
+
+# Request timeout
+# http://docs.python-requests.org/en/master/user/advanced/#timeouts
+REQUEST_TIMEOUT_SECONDS = 30

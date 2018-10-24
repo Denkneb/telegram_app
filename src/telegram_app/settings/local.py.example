@@ -21,3 +21,6 @@ DATABASES = {
 }
 
 AUTH_PASSWORD_VALIDATORS = []
+
+# https://www.npmjs.com/package/localtunnel
+LOCALTUNNEL_URL = ''

@@ -3,3 +3,4 @@ __pycache__
 /src/telegram_app/settings/local.py
 .~*
 \.idea/
+node_modules
